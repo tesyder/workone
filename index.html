@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="js/pixi.min.js"></script>
+    <script>
+		var app = new PIXI.Application(1350,600);
+        document.body.appendChild(app.view);
+        
+        var bg5 = new PIXI.Sprite.fromImage("res/bg5.png");
+        app.stage.addChild(bg5);
+        bg5.scale.x = 3;
+        bg5.scale.y = 3;
+        var bg1 = new PIXI.Sprite.fromImage("res/true.jpg");
+        app.stage.addChild(bg1);
+        bg1.scale.x = 0.7;
+        bg1.height = 600;
+        var bg2 = new PIXI.Sprite.fromImage("res/true.jpg");
+        app.stage.addChild(bg2);
+        bg2.anchor.set(1,0);
+        bg2.x = 1350;
+        bg2.scale.x = 0.7;
+        bg2.height = 600;
+        
+        var bg3 = new PIXI.Sprite.fromImage("res/bg3.png");
+        app.stage.addChild(bg3);
+        bg3.anchor.set(0,0.5);
+        bg3.x = 300;
+        bg3.y = 300;
+        bg3.scale.x= 0.4;
+        bg3.height = 500;
+        var bg4 = new PIXI.Sprite.fromImage("res/bg4.png");
+        app.stage.addChild(bg4);
+        bg4.anchor.set(0,0.5);
+        bg4.scale.x = 0.45;
+        bg4.scale.y = 0.4;
+        bg4.x = 250;
+        bg4.y = 300;
+        
+        var bg6 = new PIXI.Sprite.fromImage("res/bg6.jpg");
+        app.stage.addChild(bg6);
+        bg6.anchor.set(0,0.5);
+        bg6.width = 400;
+        bg6.height = 300;
+        bg6.x = 270;
+        bg6.y = 300;
+        var title = new PIXI.Text("西湖龙井");
+        title.style.fontFamily = "行书";
+        title.style.fontSize = 60;
+        title.style.fontWeight = "bold";
+        title.x = 750;
+        title.y = 280;
+        app.stage.addChild(title);
+    </script>
+</body>
+</html>

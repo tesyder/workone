@@ -1,150 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <script src="js/pixi.min.js"></script>
-    <script>
-		var app = new PIXI.Application(1350,600);
-        document.body.appendChild(app.view);
-        
-        var bg5 = new PIXI.Sprite.fromImage("res/bg5.png");
-        app.stage.addChild(bg5);
-        bg5.scale.x = 3;
-        bg5.scale.y = 3;
-        var bg1 = new PIXI.Sprite.fromImage("res/true.jpg");
-        app.stage.addChild(bg1);
-        bg1.scale.x = 0.7;
-        bg1.height = 600;
-        var bg2 = new PIXI.Sprite.fromImage("res/true.jpg");
-        app.stage.addChild(bg2);
-        bg2.anchor.set(1,0);
-        bg2.x = 1350;
-        bg2.scale.x = 0.7;
-        bg2.height = 600;
-        
-        var bg3 = new PIXI.Sprite.fromImage("res/bg3.png");
-        app.stage.addChild(bg3);
-        bg3.anchor.set(0,0.5);
-        bg3.x = 300;
-        bg3.y = 300;
-        bg3.scale.x= 0.4;
-        bg3.height = 500;
-        var bg4 = new PIXI.Sprite.fromImage("res/bg4.png");
-        app.stage.addChild(bg4);
-        bg4.anchor.set(0,0.5);
-        bg4.scale.x = 0.45;
-        bg4.scale.y = 0.4;
-        bg4.x = 250;
-        bg4.y = 300;
-        
-        var bg6 = new PIXI.Sprite.fromImage("res/bg6.jpg");
-        app.stage.addChild(bg6);
-        bg6.anchor.set(0,0.5);
-        bg6.width = 400;
-        bg6.height = 300;
-        bg6.x = 270;
-        bg6.y = 300;
-        
-        var map3 = new PIXI.Sprite.fromImage("res/map3.jpg");
-        app.stage.addChild(map3);
-        map3.anchor.set(0.5,0.5);
-        map3.width = 100;
-        map3.height = 100;
-        map3.x = 1050;
-        map3.y = 550;
-        map3.interactive = true;
-        map3.on("click",nextmap);
-        function nextmap(){
-        	var map1 = new PIXI.Sprite.fromImage("res/map1.jpg");
-        	app.stage.addChild(map1);
-        	map1.anchor.set(0.5,0.5);
-        	map1.width = 1000;
-        	map1.height = 600;
-        	map1.x = 675;
-        	map1.y = 300;
-        	map1.interactive = true;
-        	map1.on("click",game);
-        }
-        
-        var title = new PIXI.Text("西湖龙井");
-        title.style.fontFamily = "行书";
-        title.style.fontSize = 60;
-        title.style.fontWeight = "bold";
-        title.x = 750;
-        title.y = 280;
-        app.stage.addChild(title);
-        function game(){
-        	var woodbg1 = new PIXI.Sprite.fromImage("res/woodbg1.jpg");
-        	app.stage.addChild(woodbg1);
-        	woodbg1.anchor.set(0.5,0.5);
-        	woodbg1.width = 1000;
-        	woodbg1.height = 600;
-        	woodbg1.x = 675;
-        	woodbg1.y = 300;
-        	woodbg1.interactive = true;
-        	woodbg1.on("click",game1);
-        }
-        function game1(){
-        	var text1 = new PIXI.Text("狮字号");
-        	text1.style.fontFamily = "行书";
-        	text1.style.fontSize = 40;
-        	text1.style.fontWeight = "bold";
-        	text1.x = 400;
-        	text1.y = 100;
-     
-        	app.stage.addChild(text1);
-        	var lb = new PIXI.Sprite.fromImage("res/labei.jpg");
-        	app.stage.addChild(lb);
-        	lb.anchor.set(0.5,0.5);
-        	lb.width = 50;
-        	lb.height = 50;
-        	lb.x = 350;
-        	lb.y = 120;
-        	lb.interactive = true;
-        	lb.on("click",gg);
-        	var text2 = new PIXI.Text("龙字号");
-        	text2.style.fontFamily = "行书";
-        	text2.style.fontSize = 40;
-        	text2.style.fontWeight = "bold";
-        	text2.x = 400;
-        	text2.y = 200;
-        	app.stage.addChild(text2);
-        	var text3 = new PIXI.Text("虎字号");
-        	text3.style.fontFamily = "行书";
-        	text3.style.fontSize = 40;
-        	text3.style.fontWeight = "bold";
-        	text3.x = 400;
-        	text3.y = 300;
-        	app.stage.addChild(text3);
-        	var text4 = new PIXI.Text("云字号");
-        	text4.style.fontFamily = "行书";
-        	text4.style.fontSize = 40;
-        	text4.style.fontWeight = "bold";
-        	text4.x = 400;
-        	text4.y = 400;
-        	app.stage.addChild(text4);
-        	var text5 = new PIXI.Text("梅字号");
-        	text5.style.fontFamily = "行书";
-        	text5.style.fontSize = 40;
-        	text5.style.fontWeight = "bold";
-        	text5.x = 400;
-        	text5.y = 500;
-        	app.stage.addChild(text5);
-        }
-        function gg(){
-        	var text6 = new PIXI.Text(":取义“狮峰山”...");
-        	text6.style.fontFamily = "行书";
-        	text6.style.fontSize = 40;
-        	text6.style.fontWeight = "bold";
-        	text6.x = 530;
-        	text6.y = 100;
-        	app.stage.addChild(text6);
-        }
-    </script>
-</body>
+ <head>
+    <title>十大名茶</title>
+    <meta charset="utf-8" />
+    <style type="text/css">
+      html,body{
+        width:100%;
+      	height:100%;
+      	margin:0px;
+      }
+      ul{
+        list-style-type:none;
+      	margin:0px auto;
+      	padding:0px;
+      }
+      .menu{
+      	background-color:#000000;
+      	color:#ffffff;
+      	width:100%;
+      	font-weight:bold ;
+      	font-family:"bodoni mt";
+      	font-size: 18px;
+      }
+      .menu ul li:nth-of-type(2){
+      	background-color: white;
+      	color: #020202;
+      }
+      .menu ul{
+        width:100%;
+      	display:flex;
+      	justify-content:center;
+      }
+      .menu ul li{
+        width:200px;
+      	line-height:50px;
+      	text-align:center;
+      }
+      /* 图片列表 */
+      .image_list{
+      	margin:50px auto 0px auto;
+        width:80%;
+      	height:70%;
+      }
+      .image_list ul{
+        width:100%;
+      	height:100%;
+      	display:flex;
+      	justify-content:space-around;
+      }
+      .image_list ul li{
+      	width:12%;
+      	height:100%;
+      	border-radius:25px;
+      	opacity:0.7;
+      	background-position:center;
+      	background-repeat:no-repeat;
+      	background-size:auto 100%;
+      }
+      .image_list ul li:nth-of-type(1){
+        background-image:url("res/tea1.jpg");
+      }
+      .image_list ul li:nth-of-type(2){
+        background-image:url("res/tea2.jpg");
+      }
+      .image_list ul li:nth-of-type(3){
+        background-image:url("res/tea3.jpg");
+      }
+      .image_list ul li:nth-of-type(4){
+        background-image:url("res/tea4.jpg");
+      }
+      .image_list ul li:nth-of-type(5){
+        background-image:url("res/tea5.png");
+      }
+      .image_list ul li:nth-of-type(6){
+        background-image:url("res/tea6.jpg");
+      }
+      .image_list ul li:nth-of-type(7){
+        background-image:url("res/tea7.jpeg");
+      }
+      .image_list ul li:nth-of-type(8){
+        background-image:url("res/tea8.jpg");
+      }
+      .image_list ul li:nth-of-type(9){
+        background-image:url("res/tea9.jpg");
+      }
+      .image_list ul li:nth-of-type(10){
+        background-image:url("res/tea10.jpg");
+      }
+      .image_list ul li:hover{
+        opacity:1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="menu">
+      <ul>
+        <li>制茶过程</li>
+        <li>十大名茶</li>
+        <li>相关历史</li>
+        <li>名人趣事</li>
+        <li>冲泡方法</li>
+      </ul>
+    </div>
+    <div class="image_list">
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+    
+  </body>
 </html>
